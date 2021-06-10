@@ -1,6 +1,5 @@
 from urllib.request import urlopen
 from xml.etree import ElementTree as etree
-from datetime import datetime
 
 with urlopen("http://www.cbr.ru/scripts/XML_daily.asp") as r:
     USD_currency = print('USD', etree.parse(r).findtext('.//Valute[@ID="R01235"]/Value'))
